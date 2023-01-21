@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @RequiredArgsConstructor
-public class GlobalSearchAction implements MenuAction{
+public class GlobalSearchAction implements MenuAction {
     private final DepartmentRepository departmentRepository;
     private final LectorRepository lectorRepository;
     private final BufferedReader reader;

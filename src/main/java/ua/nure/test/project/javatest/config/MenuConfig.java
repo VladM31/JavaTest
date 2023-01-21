@@ -13,44 +13,44 @@ import java.io.BufferedReader;
 public class MenuConfig {
 
     @Bean
-    MenuItem whoIsHeadOfDepartmentMenu(DepartmentRepository repository, BufferedReader reader){
+    MenuItem whoIsHeadOfDepartmentMenu(DepartmentRepository repository, BufferedReader reader) {
         return new MenuItem(
                 "Who is head of department {department_name}",
-                new WhoIsHeadAction(repository,reader)
+                new WhoIsHeadAction(repository, reader)
         );
     }
 
     @Bean
-    MenuItem showDepartmentStatistic(DepartmentRepository repository, BufferedReader reader){
+    MenuItem showDepartmentStatistic(DepartmentRepository repository, BufferedReader reader) {
         return new MenuItem(
                 "Show statistics of department {department_name} ",
-                new ShowStatisticsAction(repository,reader)
+                new ShowStatisticsAction(repository, reader)
         );
     }
 
     @Bean
-    MenuItem showTheAverageSalaryForTheDepartment(LinkToDepartmentRepository repository, BufferedReader reader){
+    MenuItem showTheAverageSalaryForTheDepartment(LinkToDepartmentRepository repository, BufferedReader reader) {
         return new MenuItem(
                 "Show the average salary for the department {department_name}",
-                new ShowAverageSalaryForDepAction(repository,reader)
+                new ShowAverageSalaryForDepAction(repository, reader)
         );
     }
 
     @Bean
-    MenuItem showCountOfEmployeeForTheDepartment(LinkToDepartmentRepository repository, BufferedReader reader){
+    MenuItem showCountOfEmployeeForTheDepartment(LinkToDepartmentRepository repository, BufferedReader reader) {
         return new MenuItem(
                 "Show count of employee for {department_name}",
-                new ShowCountOfEmployee(repository,reader)
+                new ShowCountOfEmployee(repository, reader)
         );
     }
 
     @Bean
     MenuItem globalSearchByTemplate(DepartmentRepository departmentRepository,
                                     LectorRepository lectorRepository,
-                                    BufferedReader reader){
+                                    BufferedReader reader) {
         return new MenuItem(
                 "Global search by {template}",
-                new GlobalSearchAction(departmentRepository,lectorRepository,reader)
+                new GlobalSearchAction(departmentRepository, lectorRepository, reader)
         );
     }
 }

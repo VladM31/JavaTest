@@ -7,7 +7,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 @RequiredArgsConstructor
-public class WhoIsHeadAction implements MenuAction{
+public class WhoIsHeadAction implements MenuAction {
     private final DepartmentRepository depRepository;
     private final BufferedReader reader;
 
@@ -18,7 +18,7 @@ public class WhoIsHeadAction implements MenuAction{
 
         var opDepartment = this.depRepository.findHeadByName(depName);
 
-        if(opDepartment.isEmpty()){
+        if (opDepartment.isEmpty()) {
             System.err.println("Head not found or department is not exists");
             return;
         }

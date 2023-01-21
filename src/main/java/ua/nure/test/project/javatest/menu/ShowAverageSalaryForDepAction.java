@@ -6,7 +6,7 @@ import ua.nure.test.project.javatest.repository.LinkToDepartmentRepository;
 import java.io.BufferedReader;
 
 @RequiredArgsConstructor
-public class ShowAverageSalaryForDepAction implements MenuAction{
+public class ShowAverageSalaryForDepAction implements MenuAction {
     private final LinkToDepartmentRepository repository;
     private final BufferedReader reader;
 
@@ -17,11 +17,11 @@ public class ShowAverageSalaryForDepAction implements MenuAction{
 
         var opAvg = this.repository.findAvgSalaryByName(depName);
 
-        if(opAvg.isEmpty()){
+        if (opAvg.isEmpty()) {
             System.err.println("Department is not found");
             return;
         }
 
-        System.out.println("The average salary of %s is %s".formatted(depName,opAvg.get()));
+        System.out.println("The average salary of %s is %s".formatted(depName, opAvg.get()));
     }
 }

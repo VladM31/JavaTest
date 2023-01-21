@@ -8,7 +8,7 @@ import ua.nure.test.project.javatest.entity.Department;
 import java.util.List;
 import java.util.Optional;
 
-public interface DepartmentRepository extends Repository<Department,Long> {
+public interface DepartmentRepository extends Repository<Department, Long> {
 
     @Query("SELECT d.headOfDepartmentName FROM ua.nure.test.project.javatest.entity.Department d WHERE d.name = :name")
     Optional<String> findHeadByName(@Param("name") String name);

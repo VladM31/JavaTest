@@ -17,15 +17,15 @@ import java.time.LocalDate;
 public class Lector {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id",nullable = false)
+    @Column(name = "id", nullable = false)
     private Long id;
     @Enumerated(EnumType.STRING)
     @Column(name = "degree", nullable = false)
     private Degree degree;
-    @Column(name="first_name", nullable = false, length = 60)
+    @Column(name = "first_name", nullable = false, length = 60)
     private String firstName;
-    @Column(name="last_name", nullable = false, length = 60)
+    @Column(name = "last_name", nullable = false, length = 60)
     private String lastName;
-    @Column(name="birth_date", nullable = false)
+    @Column(name = "birth_date", nullable = false)
     private LocalDate birthDate;
 }

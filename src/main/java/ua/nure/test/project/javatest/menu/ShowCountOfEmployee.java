@@ -6,7 +6,7 @@ import ua.nure.test.project.javatest.repository.LinkToDepartmentRepository;
 import java.io.BufferedReader;
 
 @RequiredArgsConstructor
-public class ShowCountOfEmployee implements MenuAction{
+public class ShowCountOfEmployee implements MenuAction {
     private final LinkToDepartmentRepository repository;
     private final BufferedReader reader;
 

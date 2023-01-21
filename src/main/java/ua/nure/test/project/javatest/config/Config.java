@@ -10,8 +10,8 @@ import java.io.InputStreamReader;
 public class Config {
 
     @Bean
-    public BufferedReader consoleReader(){
-        return  new BufferedReader(
+    public BufferedReader consoleReader() {
+        return new BufferedReader(
                 new InputStreamReader(System.in));
     }
 }

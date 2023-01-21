@@ -14,9 +14,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class LinkId implements Serializable {
-    @Column(name = "departments_id",nullable = false)
+    @Column(name = "departments_id", nullable = false)
     private Long departmentId;
 
-    @Column(name = "lectors_id",nullable = false)
+    @Column(name = "lectors_id", nullable = false)
     private Long lectorsId;
 }
